@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
   <link rel="stylesheet" href="style1.css">
-  <title>Permintaan maaf</title>
+  <title>permintaan maaf</title>
 
 </head>
 
@@ -22,7 +22,7 @@
     <div class="card">
       <h2></h2>
       <img onclick="mulai()" src="asset/1.jpg" alt="" srcset="" />
-      <h3 style="color: #f15aff;">Klik kucingnya yaa de</h3>
+      <h3 style="color: #f15aff;">klik kucingnya yaa de</h3>
     </div>
   </div>
   <div class="atas" id="atas">
@@ -33,13 +33,13 @@
   </div>
 
   <div id="ungu">
-    <p data-aos="zoom-in">Mas minta maaf yaa de</p>
-    <p data-aos="zoom-in">Ngga bermaksud menyingung ko gatau kenapa pemilihan kalimatnya salah muluu</p>
-    <p data-aos="zoom-in">Ade selalu baik mau diajak komunikasi</p>
-    <p data-aos="zoom-in">Mas mah payaaahh ada aja yg bikin ade sedih terus :(</p>
+    <p data-aos="zoom-in">mas minta maaf yaa de</p>
+    <p data-aos="zoom-in">ngga bermaksud menyingung ko gatau kenapa pemilihan kalimatnya salah muluu</p>
+    <p data-aos="zoom-in">ade selalu baik mau diajak komunikasi</p>
+    <p data-aos="zoom-in">mas mah payaaahh ada aja yg bikin ade sedih terus :(</p>
     <!-- <p data-aos="zoom-in">Will Become a more useful people :) </p> -->
 
-    <p data-aos="zoom-in">Klik hati di samping
+    <p data-aos="zoom-in">klik hati di samping
       <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
     </p>
   </div>
@@ -70,15 +70,15 @@
     }
 
     function wa(isi) {
-      window.open("https://api.whatsapp.com/send?phone=6281554433023&text=Assalamu'alaikum%20%20jangan%20ulangi%20lagi%20yaaah%20maaass");
+      window.open("https://api.whatsapp.com/send?phone=6281554433023&text=Assalamu'alaikum%20jangan%20ulangi%20lagi%20yaaah%20maaass");
     }
     async function tanya() {
-      var { value: kado } = await swal.fire({ title: "Masih mau hijab bella kan?", input: "text", showCancelButton: false, });
+      var { value: kado } = await swal.fire({ title: "masih mau hijab bella kan?", input: "text", showCancelButton: false, });
       if (kado) {
-        await swal.fire("Kirim jawabannya ke wa mas ya");
+        await swal.fire("kirim jawabannya ke wa mas yaaahh");
         wa(kado);
       } else {
-        await swal.fire("Jangan dikosongin dong");
+        await swal.fire("jangan dikosongin yaaahh");
         tanya();
       }
     }
