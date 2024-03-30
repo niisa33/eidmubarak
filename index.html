@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="style1.css">
+  <title>Permintaan maaf</title>
+
+</head>
+
+<body class="body">
+  <audio class="audio" src="asset/music.mp3" autoplay type="audio" loop=""></audio>
+  <div class="open">
+    <div class="card">
+      <h2></h2>
+      <img onclick="mulai()" src="asset/1.jpg" alt="" srcset="" />
+      <h3 style="color: #f15aff;">Klik kucingnya yaa de</h3>
+    </div>
+  </div>
+  <div class="atas" id="atas">
+    <img onclick="mulai()" src="asset/cute.jpg" alt="" />
+    <h2 style="color: #ff71c0;">30 Maret 2024</h2>
+    <div id="particles"></div>
+  </div>
+
+  <div id="ungu">
+    <p data-aos="zoom-in">Mas minta maaf yaa de</p>
+    <p data-aos="zoom-in">Ngga bermaksud menyingung ko gatau kenapa pemilihan kalimatnya salah muluu</p>
+    <p data-aos="zoom-in">Ade selalu baik mau diajak komunikasi</p>
+    <p data-aos="zoom-in">Mas mah payaaahh ada aja yg bikin ade sedih terus :(</p>
+    <!-- <p data-aos="zoom-in">Will Become a more useful people :) </p> -->
+
+    <p data-aos="zoom-in">Klik hati di samping
+      <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
+    </p>
+  </div>
+  <script>
+
+    var musik = "";
+
+  </script>
+
+  <script>
+    AOS.init({ once: true, }); 
+  </script>
+
+  <script>
+    var audio = document.querySelector(".audio");
+    if (musik) {
+      audio.src = musik;
+    }
+
+    function mulai() {
+      audio.play();
+      document.querySelector(".open").style = "opacity: 0;";
+      document.querySelector(".body").style = "overflow-y: scroll;";
+
+      setTimeout(function () {
+        document.querySelector(".open").style.display = "none";
+      }, 1000);
+    }
+
+    function wa(isi) {
+      window.open("https://api.whatsapp.com/send?phone=6281554433023&text=Assalamu'alaikum%20%20jangan%20ulangi%20lagi%20yaaah%20maaass");
+    }
+    async function tanya() {
+      var { value: kado } = await swal.fire({ title: "Masih mau hijab bella kan?", input: "text", showCancelButton: false, });
+      if (kado) {
+        await swal.fire("Kirim jawabannya ke wa mas ya");
+        wa(kado);
+      } else {
+        await swal.fire("Jangan dikosongin dong");
+        tanya();
+      }
+    }
+
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/tsparticles-preset-fireworks@2/tsparticles.preset.fireworks.bundle.min.js"></script>
+  <script src="../asset/app.js"></script>
+
+</body>
+
+</html>
