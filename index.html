@@ -12,33 +12,44 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
   <link rel="stylesheet" href="style1.css">
-  <title>permintaan maaf</title>
+  <title>Happy Eid Mubarak</title>
 
 </head>
 
 <body class="body">
   <audio class="audio" src="asset/music.mp3" autoplay type="audio" loop=""></audio>
   <div class="open">
-    <div class="card">
+    <div style="padding: 50px; width: 50%;" class="card">
       <h2></h2>
       <img onclick="mulai()" src="asset/1.jpg" alt="" srcset="" />
-      <h3 style="color: #f15aff;">klik kucingnya yaa de</h3>
+      <h3 style="color: #f15aff">Semoga momen bahagia Idul Fitri menginspirasi kita untuk saling
+        memaafkan. Happy Eid Mubarak</h3>
+
+      <h3 style="color: #f15aff;">Klik kucingnya yaa</h3>
     </div>
   </div>
   <div class="atas" id="atas">
     <img onclick="mulai()" src="asset/cute.jpg" alt="" />
-    <h2 style="color: #ff71c0;">30 Maret 2024</h2>
+    <h2 style="color: #ff71c0;">kucingnya lucu bukan</h2>
     <p style="color: #ff71c0;">scroll ke bawah yaa</p>
     <div id="particles"></div>
   </div>
 
   <div id="ungu">
     <p data-aos="zoom-in">mas minta maaf yaa de</p>
-    <p data-aos="zoom-in">ngga bermaksud menyingung ko gatau kenapa pemilihan kalimatnya salah muluu</p>
-    <p data-aos="zoom-in">ade selalu baik mau diajak komunikasi</p>
-    <p data-aos="zoom-in">mas mah payaaahh ada aja yg bikin ade sedih terus :(</p>
-    <!-- <p data-aos="zoom-in">Will Become a more useful people :) </p> -->
-
+    <p data-aos="zoom-in">ngga bermaksud menyingung ko waktu itu gatau kenapa pemilihan kalimatnya salah muluu</p>
+    <!-- <p data-aos="zoom-in">ade selalu baik mau diajak komunikasi</p> -->
+    <p data-aos="zoom-in">mas mah payaaahh udah dikasih kesempatan buat komunikasi tapi ada aja yg bikin ade sedih terus
+      :(</p>
+    <p data-aos="zoom-in">udah paham kan kenapa kadang nulis chat di note dulu ga langsung di aplikasinya. ade waktu itu
+      bilang "iya gapapa manusia ga luput dari kesalahan ko dan bisa saling memaafkan"</p>
+    <p data-aos="zoom-in">tapi sekarang ucapan ade waktu itu ga bisa dibuktiin ketika mas ngelakuin kesalahan</p>
+    <p data-aos="zoom-in">kita itu awal saling kenal baik baik berakhir juga harus baik walaupun ga bisa bersatu</p>
+    <p data-aos="zoom-in">mas lebih ikhlas kita temenan terjalin silaturahmi dan ridho lepasin ade dari pada kek gini
+      seolah ade benci banget gak mau kenal lagi sama mas</p>
+    <p data-aos="zoom-in">dengan momen hari raya idul fitri marilah kita saling bermaaf-maaf an entah sikap, perbuatan maupun
+      ucapan yang udah bikin tersinggung. hubungan silaturahmi lebih indah dari pada harus seolah tak mau
+      mengenal lagi satu sama lain</p>
     <p data-aos="zoom-in">klik hati di samping
       <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
     </p>
@@ -70,10 +81,10 @@
     }
 
     function wa(isi) {
-      window.open("https://api.whatsapp.com/send?phone=6281554433023&text=Assalamu'alaikum%20jangan%20ulangi%20lagi%20yaaah%20maaass");
+      window.open("https://api.whatsapp.com/send?phone=6281554433023&text=Assalamu'alaikum%20iyaa%20mau%20jalin%20silaturahmi%20ko");
     }
     async function tanya() {
-      var { value: kado } = await swal.fire({ title: "masih mau hijab bella kan?", input: "text", showCancelButton: false, });
+      var { value: kado } = await swal.fire({ title: "masih mau temenan jalin silaturahmi kan?", input: "text", showCancelButton: false, });
       if (kado) {
         await swal.fire("kirim jawabannya ke wa mas yaaahh");
         wa(kado);
@@ -86,7 +97,7 @@
   </script>
   <script
     src="https://cdn.jsdelivr.net/npm/tsparticles-preset-fireworks@2/tsparticles.preset.fireworks.bundle.min.js"></script>
-  <script src="../asset/app.js"></script>
+  <script src="asset/app.js"></script>
 
 </body>
 
