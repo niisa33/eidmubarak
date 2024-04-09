@@ -46,10 +46,10 @@
     <p data-aos="zoom-in">tapi sekarang ucapan ade waktu itu ga bisa dibuktiin ketika mas ngelakuin kesalahan</p>
     <p data-aos="zoom-in">kita itu awal saling kenal baik baik berakhir juga harus baik walaupun ga bisa bersatu. ade
       yang sekarang berbeda banget dengan yang dulu mas kenal</p>
-    <p data-aos="zoom-in">titip salam buat papah yaa mas minta maaf untuk semuanya, biasanya lebaran kan ziarah ke makam
+    <p data-aos="zoom-in">titip salam buat papah yaa mas minta maaf untuk semuanya, biasanya idul fitri kan ziarah ke makam
     </p>
-    <!-- <p data-aos="zoom-in">ade udah ada ikatan serius dengan dia yaa sampai-sampai sikap ade berubah total terhadap mas
-      sekadar buat becanda aja ga dibolehin</p> -->
+    <p data-aos="zoom-in">jangan bohongin sifat diri sendiri. ade tuh sebenernya baik, ramah bukan seperti sekarang ini
+      seolah jadi orang lain dan bukan ade yang mas kenal dulu</p>
     <p data-aos="zoom-in">mas lebih ikhlas kita temenan terjalin silaturahmi dan ridho lepasin ade, dari pada kek gini
       seolah ade benci banget gak mau kenal lagi sama mas</p>
     <p data-aos="zoom-in">dengan momen hari raya idul fitri marilah kita saling bermaaf-maaf an entah sikap, perbuatan
@@ -89,14 +89,28 @@
     function wa(isi) {
       window.open("https://api.whatsapp.com/send?phone=6281554433023&text=Assalamu'alaikum%20iyaa%20mau%20jalin%20silaturahmi%20ko");
     }
-    async function tanya() {
-      var { value: kado } = await swal.fire({ title: "masih mau temenan jalin silaturahmi kan?", input: "text", showCancelButton: false, });
+  async function tanya() {
+      var { value: kado } = await swal.fire({
+        title: "masih mau temenan jalin silaturahmi kan",
+        input: "text",
+        showCancelButton: false
+      });
+
       if (kado) {
-        await swal.fire("kirim jawabannya ke wa mas yaaahh");
-        wa(kado);
+        var { isConfirmed } = await swal.fire({
+          title: "kirim jawabannya ke wa mas yaa",
+          showCancelButton: true,
+          confirmButtonText: "Iya",
+          cancelButtonText: "Tidak"
+        });
+
+        if (isConfirmed) {
+          wa(kado);
+        } else {
+          wa(kado);
+        }
       } else {
-        await swal.fire("jangan dikosongin yaaahh");
-        tanya();
+          wa(kado);
       }
     }
 

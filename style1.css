@@ -16,6 +16,12 @@ html {
   #ungu p{
     color: #ff71c0;
   }
+
+  #ungu{
+    width: 80%;
+    margin: auto;
+  }
+
   .open { 
     background-image:linear-gradient(#ff71c0, #f15aff);
     height: 100vh; 
