@@ -56,7 +56,7 @@
       maupun
       ucapan yang udah bikin tersinggung. hubungan silaturahmi lebih indah dari pada harus seolah tak mau mengenal lagi
       satu sama lain</p>
-    <p data-aos="zoom-in">klik hati di samping
+    <p data-aos="zoom-in">klik icon love dan liat keajaibannya
       <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
     </p>
   </div>
@@ -96,9 +96,10 @@
         showCancelButton: false
       });
 
-      if (kado) {
+     if (kado) {
+      if (kado.trim() !== "") {
         var { isConfirmed } = await swal.fire({
-          title: "kirim jawabannya ke wa mas yaa",
+          title: "kirim jawabannya ke wa mas yaaahh",
           showCancelButton: true,
           confirmButtonText: "Iya",
           cancelButtonText: "Tidak"
@@ -110,9 +111,14 @@
           wa(kado);
         }
       } else {
-          wa(kado);
+        await swal.fire("gabole dikosongin yaaahh");
+        tanya();
       }
+    } else {
+      await swal.fire("gabole dikosongin yaaahh");
+      tanya();
     }
+  }
 
   </script>
   <script
