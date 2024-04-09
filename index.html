@@ -99,7 +99,7 @@
      if (kado) {
       if (kado.trim() !== "") {
         var { isConfirmed } = await swal.fire({
-          title: "kirim jawabannya ke wa mas yaaahh",
+          title: "kirim jawabannya ke wa mas yaa",
           showCancelButton: true,
           confirmButtonText: "Iya",
           cancelButtonText: "Tidak"
@@ -111,11 +111,11 @@
           wa(kado);
         }
       } else {
-        await swal.fire("gabole dikosongin yaaahh");
+        await swal.fire("gabole dikosongin yaa");
         tanya();
       }
     } else {
-      await swal.fire("gabole dikosongin yaaahh");
+      await swal.fire("gabole dikosongin yaa");
       tanya();
     }
   }
